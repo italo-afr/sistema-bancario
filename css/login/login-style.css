@@ -1,0 +1,120 @@
+.container {
+    margin: 2em 5em;
+}
+
+.formulario {
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__container {
+    margin: 3em 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__campo {
+    margin-bottom: 2em;
+    border: none;
+    width: 50vw;
+}
+
+.formulario__titulo-texto {
+    margin: 1em 0;
+    font-weight: var(--fontw-700);
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.campo__etiqueta {
+    font-weight: var(--fontw-500);
+    line-height: 20px;
+    font-size: var(--fontsize-4);
+}
+
+.campo__escrita {
+    display: block;
+    border: 2px solid var(--azul-claro);
+    font-size: 20px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 1em;
+    margin-top: 0.5em;
+}
+
+.campo__escrita--menor {
+    width: 50%;
+}
+
+.termos__texto {
+    line-height: 20px;
+    display: inline;
+}
+
+.formulario__botao {
+    background: var(--azul);
+    margin: 2em auto;
+    display: block;
+    border: none;
+    padding: 1em 4em;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--letras-btn);
+}
+
+.formulario__botao--ancora {
+    text-decoration: none;
+    width: 50%;
+}
+
+.formulario__botao:hover {
+    color: var(--azul);
+    background-color: var(--azul-claro-btn);
+    transition: var(--transition-3);
+}
+
+.formulario__texto {
+    margin: 1em 8em;
+}
+
+.formulario__texto--negrito {
+    font-weight: 700;
+}
+
+.formulario__texto-secundario {
+    margin: 2em 6em;
+}
+
+.formulario__termos {
+    border: none;
+}
+
+.mensagem-erro {
+    color: red;
+}
+
+.campo__escrita--erro {
+    border: 2px solid red;
+}
+
+.formulario__mensagem--sucesso {
+    display: block;
+}
+
+.formulario__etapas {
+    width: 20%;
+}
+
+.navbar-link.active:not(.active-page) {
+    color: var(--letras);
+}
+
+.navbar-link.active:hover {
+    color: var(--azul);
+}

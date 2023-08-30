@@ -1,0 +1,55 @@
+/* Botão da Carteira */
+
+.container { padding-inline: 15px; }
+
+.btn {
+    color: var(--titulos);
+    border-radius: 50px;
+  }
+  
+.btn-outline {
+    font-size: var(--fontsize-6);
+    font-weight: var(--fontw-500);
+    font-family: var(--font-sans);
+    border: 1px solid var(--letras);
+    padding: 5px 15px;
+    transition: var(--transition-1);
+    background-color: var(--azul-claro);
+  }
+  
+.btn-outline:is(:hover, :focus) {
+    background-color: var(--azul);
+    border-color: var(--azul);
+    color: var(--letras-btn);
+}
+
+.btn-primary {
+    position: relative;
+    background-color: var(--azul);
+    color: var(--letras-btn);
+    max-width: max-content;
+    font-weight: var(--fontw-700);
+    padding: 13px 30px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .btn-primary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: -50px;
+    background-image: var(--gradient);
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: -1;
+    transition: var(--transition-2);
+  }
+  
+  .btn-primary:is(:hover, :focus)::after {
+    transform: translateX(0);
+    opacity: 1;
+  }
+

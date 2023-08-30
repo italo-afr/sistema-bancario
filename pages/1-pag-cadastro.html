@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criando conta</title>
+  <link rel="shortcut icon" href="../img/favicon.svg" type="image/svg+xml" />
+  <link href="../css/reset.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" crossorigin rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="../css/propriedades.css" rel="stylesheet" />
+  <link href="../css/header-nav.css" rel="stylesheet" />
+  <link href="../css/button.css" rel="stylesheet" />
+  <link href="../css/hero-banner.css" rel="stylesheet" />
+  <link href="../css/rodape.css" rel="stylesheet" />
+  <link href="../css/responsivo.css" rel="stylesheet" />
+  <link href="../css/cadastro-login/cadastro-formulario.css" rel="stylesheet" />
+  <link href="../css/cadastro-login/responsivoCadastroLogin.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- #Cabeçalho  -->
+  <header class="header active" data-header>
+    <div class="nav">
+      <a href="../index.html" class="logo">
+        <img src="../img/logo.svg" width="32" height="32" alt="Logo" />
+        Sistema Bancário
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="../index.html" class="navbar-link active" data-nav-link>Início</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Funcionalidades</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Segmentos</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Preços</a>
+          </li>
+
+          <!-- 
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>F</a>
+                    </li>
+                  -->
+        </ul>
+      </nav>
+
+      <button class="nav-altera-btn" aria-label="Altera Menu" data-nav-altera>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <a href="./3-pag-login.html" class="btn btn-outline">Acessar conta</a>
+    </div>
+  </header>
+  
+  <!-- #Formulario de cadastro  -->
+  <main class="container">
+    <section class="formulario">
+      <div class="formulario__container">
+        <img src="../img/status-1.png" alt="Etapa um de dois" class="formulario__etapas">
+        <h2 class="formulario__titulo-texto">
+          Preencha os campos abaixo para criar sua conta!
+        </h2>
+      </div>
+
+      <form class="principal__formulario" data-formulario>
+        <fieldset class="formulario__campo">
+          <label class="campo__etiqueta" for="nome">Nome</label>
+          <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+
+        <fieldset class="formulario__campo">
+          <label class="campo__etiqueta" for="senha">Senha</label>
+          <input name="senha" id="senha" class="campo__escrita" type="password" 
+          autocomplete="current-password" onkeyup="checarSenha(this.value)" minlength="6" maxlength="30" required />
+          <span class="mensagem-erro"></span>
+          <div class="validar">
+            <ul>
+              <li id="minuscula">Pelo menos um caractere minúsculo</li>
+              <li id="maiuscula">Pelo menos um caractere maiúsculo</li>
+              <li id="numero">Pelo menos um número</li>
+              <li id="especial">Pelo menos um caractere especial ( !@#$%&*...)</li>
+              <li id="caracteres">Pelo menos oito caracteres</li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset class="formulario__campo">
+          <label class="campo__etiqueta" for="confirmSenha">Corfirme sua senha</label>
+          <input name="confirmSenha" id="confirmSenha" class="campo__escrita" type="password" minlength="6" maxlength="30" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        
+        <fieldset class="formulario__campo">
+          <label class="campo__etiqueta" for="email">E-mail</label>
+          <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+
+        <fieldset class="formulario__campo">
+          <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
+          <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" required type="text" minlength="11"
+            maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+
+        <fieldset class="formulario__campo">
+          <label class="campo__etiqueta" for="aniversario">Data de nascimento</label>
+          <input name="aniversario" id="aniversario" class="campo__escrita campo__escrita--menor" type="date"
+            required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+
+        <fieldset class="formulario__termos">
+          <input name="termos" class="termos__input" type="checkbox" required />
+          <p class="termos__texto">
+            Li e estou ciente quanto às condições de tratamento dos meus dados
+            conforme descrito na Política de Privacidade do sistema.
+          </p>
+          <span class="mensagem-erro"></span>
+        </fieldset>
+
+        <div>
+          <input value="Concluir" class="formulario__botao" id="enviar" data-botao-enviar type="submit" />
+          <span class="mensagem-erro"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- #Footer  -->
+  <footer class="footer">
+    <div class="footer-top" data-section>
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="../img/logo.svg" width="50" height="50" alt="Cryptex logo" />
+            Sistema Bancário
+          </a>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Serviços</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Planos</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Exemplo</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Ajuda</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Central de ajuda</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Feedback do usuário</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Sobre nós</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sobre o sistema</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Verificação</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/criar-conta/valida-cadastro.js" type="module"></script>
+  <script src="../js/criar-conta/valida-senha.js"></script>
+  <script src="../js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

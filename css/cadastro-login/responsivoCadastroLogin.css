@@ -1,0 +1,32 @@
+@media screen and (max-width: 900px) {
+    .formulario {
+        width: 70%;
+    }
+
+    .formulario__texto {
+        margin: 0;
+    }
+
+    .container {
+        padding-top: 50px;
+    }
+
+    .campo__escrita--menor {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1980px) {
+    .formulario {
+        width: 70%;
+    }
+
+    .formulario__texto {
+        margin: 0;
+    }
+
+    .container {
+        padding-top: 50px;
+    }
+
+}

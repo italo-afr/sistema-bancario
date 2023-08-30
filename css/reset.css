@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+img,
+svg,
+data,
+span,
+button,
+ion-icon { display: block; }
+
+img { height: auto; }
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+ion-icon { pointer-events: none; }
+
+address { font-style: normal; }
+
+table { border-collapse: collapse; }
+
+html {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-1);
+  color: var(--letras);
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+body.active { overflow: hidden; }
+
+::-webkit-scrollbar { width: 10px; }
+
+::-webkit-scrollbar-track { background-color: hsl(220, 4%, 5%); }
+
+::-webkit-scrollbar-thumb { background-color: hsl(220, 5%, 20%); }
+
+::-webkit-scrollbar-thumb:hover { background-color: hsl(220, 5%, 30%); }
+
+:focus-visible { outline-offset: 4px; }
