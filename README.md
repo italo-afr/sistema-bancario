@@ -9,6 +9,8 @@
   <h2 align="center">Sistema bancário - Website <br/> Um site relacionado a organização financeira para empresas </h2>
 
   Sistema bancário é um site totalmente responsivo, <br />Responsivo para todos os dispositivos, foi criado usando HTML, CSS e JavaScript.
+  <br/>
+  Atualmente ele só tem funções de Front End
 
 </div>
 
